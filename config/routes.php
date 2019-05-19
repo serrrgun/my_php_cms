@@ -1,13 +1,13 @@
 <?php
 
-use ishop\Router;
+use ishop\Router; // ипользуем класс Router
 
 
 
-// дефолтные мпршруты для админки
-Router::add('^admin$', ['controller' => 'Main', 'action' => 'index', 'prefix' => 'admin']);
-Router::add('^admin/?(?P<controller>[a-z-]+)/?(?P<action>[a-z-]+)?$', ['prefix' => 'admin']);
+// дефолтные маршруты для админки
+Router::add('^admin$', ['controller' => 'Main', 'action' => 'index', 'prefix' => 'admin']);   // вызываем метод add класса Router
+Router::add('^admin/?(?P<controller>[a-z-]+)/?(?P<action>[a-z-]+)?$', ['prefix' => 'admin']); // вызываем метод add класса Router
 
 // Дефолтные маршруты для сайта
-Router::add('^$', ['controller' => 'Main', 'action' => 'index']);
-Router::add('^(?P<controller>[a-z-]+)/?(?P<action>[a-z-]+)?$');
+Router::add('^$', ['controller' => 'Main', 'action' => 'index']); // вызываем метод add класса Router
+Router::add('^(?P<controller>[a-z-]+)/?(?P<action>[a-z-]+)?$');   // вызываем метод add класса Router
