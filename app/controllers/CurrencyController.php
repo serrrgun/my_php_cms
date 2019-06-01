@@ -7,6 +7,7 @@ class CurrencyController extends AppController{
     public function changeAction() {
 
         $currency = !empty($_GET['curr']) ? $_GET['curr'] : null;
+        
         if($currency) {
             $curr = \R::findOne('currency', 'code = ?', [$currency]);
             if(!empty($curr)) {
@@ -14,6 +15,7 @@ class CurrencyController extends AppController{
             }
         }
         redirect();
+        
     }
 
 }

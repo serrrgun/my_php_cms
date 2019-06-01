@@ -2,7 +2,7 @@
 
 use ishop\Router; // ипользуем класс Router
 
-
+Router::add('^product/(?P<alias>[a-z0-9-]+)/?$', ['controller' => 'Product', 'action' => 'view']);
 
 // дефолтные маршруты для админки
 Router::add('^admin$', ['controller' => 'Main', 'action' => 'index', 'prefix' => 'admin']);   // вызываем метод add класса Router

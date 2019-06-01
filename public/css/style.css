@@ -3071,3 +3071,12 @@ ul.tag-men {
 .product-one > .product-left {
     margin-bottom: 20px;
 }
+
+.menu-container {
+    width: 100%;
+    background: #fff;
+}
+
+.menu > ul > li a {
+    padding: 0.5em 3em;
+}

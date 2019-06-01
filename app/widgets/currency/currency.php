@@ -7,8 +7,8 @@ use ishop\App;
 class Currency {
 
     protected $tpl;
-    protected $currencies;
-    protected $currency;
+    protected $currencies;  // список всех доступных валют
+    protected $currency;    // активная для пользователя валюта
 
     public function __construct() {
         
