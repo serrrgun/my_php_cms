@@ -34,6 +34,7 @@ class Router {
     public static function dispatch($url) {
 
         $url = self::removeQueryString($url);
+        
         if(self::matchRoute($url)) {            // если метод  matchRoute вернёт true, т.е если url адрес существует и должны вернуть какой то контроллер
            $controller = 'app\controllers\\' . self::$route['prefix'] . self::$route['controller'] . 'Controller'; // создаем переменную $controller 
            if(class_exists($controller)) {                          // если имя класса существует (класс был объявлен)
